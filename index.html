@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wetter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="Ihr link zu jquery-3.4.1.min.js"></script>
+<script src="js/wetter.js"></script>
+</head>
+<body>
+<div class="alles">
+<h1 class="h1">Wetter</h1>
+<hr>
+<div class="mainbuttons">
+<button class="p button wetter wetterbutton" onclick = "wetterJson()">Wetter abrufen</button>
+</div>
+<h2 id="tre"></h2>
+<div class="wetterergebnis">
+<table class="wettertabelle">
+<tr>
+<td id="temp"></td>
+<td class="icon" rowspan="6"><img class="wetterIcon" id="wetterIcon"></img></td></tr>
+<tr>
+<td id="desc"></td></tr>
+<tr>
+<td id="humi"></td></tr>
+<tr>
+<td id="wind"></td></tr>
+<tr>
+<td id="auf"></td></tr>
+<tr>
+<td id="unter"></td></tr>
+</table>
+</div>
+</div>
+</body>
+</html>
