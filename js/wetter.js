@@ -6,21 +6,21 @@
 function wetterJson(){
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=IhreStadt&appid=IhreID",
 
-		function(json){
-		var timeData = new Date(json.dt * 1000);
-		var temp = json.main.temp - 273.15;
-		var dscptn = json.weather[0].id;
-		var windSpeed = json.wind.speed * 3.6;
-		var windDeg = json.wind.deg;
-		var sunRise = new Date(json.sys.sunrise * 1000);
-		var sunSet = new Date(json.sys.sunset * 1000);
-		var hours = timeData.getHours();
-		var minutes = timeData.getMinutes();
-		var srHours = sunRise.getHours();
-		var srMinutes = sunRise.getMinutes();
-		var ssHours = sunSet.getHours();
-		var ssMinutes = sunSet.getMinutes();
-		document.getElementById("wetterIcon").style.display="block";
+	function(json){
+	var timeData = new Date(json.dt * 1000);
+	var temp = json.main.temp - 273.15;
+	var dscptn = json.weather[0].id;
+	var windSpeed = json.wind.speed * 3.6;
+	var windDeg = json.wind.deg;
+	var sunRise = new Date(json.sys.sunrise * 1000);
+	var sunSet = new Date(json.sys.sunset * 1000);
+	var hours = timeData.getHours();
+	var minutes = timeData.getMinutes();
+	var srHours = sunRise.getHours();
+	var srMinutes = sunRise.getMinutes();
+	var ssHours = sunSet.getHours();
+	var ssMinutes = sunSet.getMinutes();
+	document.getElementById("wetterIcon").style.display="block";
 		
 		//führende Null bei Stunden und Minuten < 10 hinzufügen
 		hours = ((hours < 10) ? "0" + hours : hours);
